@@ -50,7 +50,7 @@ jobs:
         id-token: write
       environment:
         name: github-pages
-        url: https://marilliadantas.github.io/teste-pipe/index.html
+        url: https://marilliadantas.github.io/desafio-loomi/index.html
       steps:
         - name: Setup Pages
           uses: actions/configure-pages@v5
