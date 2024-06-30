@@ -17,7 +17,7 @@ Este projeto foi desenvolvido como parte de um desafio técnico para a empresa L
 
 ##  📥 Clonando o projeto:
 ```bash
-git clone 
+git clone https://github.com/marilliadantas/desafio-loomi
   ```
 
 ##  👩🏻‍💻​ Para instalar as dependências e os plugins:
