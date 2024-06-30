@@ -36,7 +36,7 @@ npx cypress open
 
 #### Rodando em modo headless:
 ```bash
-npm run test:run
+npm run test
 ```
 
 #### Gerar relatório:
