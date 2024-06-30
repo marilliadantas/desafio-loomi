@@ -10,6 +10,7 @@
     "test:firefox": "cypress run --browser firefox",
     "test:edge": "cypress run --browser edge",
     "test": "cypress run --config video=false --env allure=true,email=$EMAIL,senha=$PASSWORD --browser chrome --headless || true",
+    "test:run": "cypress run --config video=false --env allure=true --browser chrome --headless || true",
     "allure:report": "allure generate allure-results",
     "allure:clear": "rm -r allure-results/ allure-report || true",
     "test:cy": "npm run allure:clear && npm run test && npm run allure:report"
