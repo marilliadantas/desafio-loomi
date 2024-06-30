@@ -27,7 +27,7 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: npm run test
+        run: npm run test:ci
 
       - name: Generate report
         run: npm run allure:report
