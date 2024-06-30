@@ -19,7 +19,7 @@ const senha = faker.internet.password(6);
       afterEach(() => {
         home.abrirModal()
         modal.clicarBtnSair()
-      })
+    })
 
       it("Cadastro com sucesso", () => {
         cadastro.preencherCadastro(nome, email, senha, senha)

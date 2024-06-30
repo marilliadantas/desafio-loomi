@@ -1,5 +1,5 @@
 import home from "../../support/pages/homePage";
-import modal from "../../support/pages/modalPage";
+import melhoresMomentos from "../../support/pages/melhoresMomentosPage";
 
   describe("Validar melhores momentos", () => {
     beforeEach(() => {
@@ -10,9 +10,10 @@ import modal from "../../support/pages/modalPage";
       cy.logout()
     })
 
-
     it('CT37 - Filtrar por time válido', () => {
-      
+      home.acessarMelhoresMomentos()
+      melhoresMomentos.validaPaginaMelhoresMomentos().then((text) => {
+        expect(text).eq('Melhores momentos das Partidas Finalizadas')
     })
 
     it('CT38 - Filtrar por time inválido', () => {
@@ -26,4 +27,5 @@ import modal from "../../support/pages/modalPage";
     it('CT40 - Filtrar por campeonato inválido', () => {
       
     })
+  })
 })

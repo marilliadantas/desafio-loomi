@@ -46,7 +46,11 @@ export default {
         return get_text(el.msg)
     },
 
-    acessarPaginaFavoritos() {
+    acessarFavoritos() {
         click(el.paginaFavoritos)
+    },
+
+    acessarMelhoresMomentos() {
+        click(el.paginaMelhoresMomentos)
     }
 }

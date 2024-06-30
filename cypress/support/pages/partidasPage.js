@@ -8,5 +8,9 @@ export default {
 
     validarPartida() {
         return cy.get(el.partidaFavoritada).invoke('text')
-        }
+    },
+
+    clicarBtnAddCalendario() {
+        click_index(el.btnFavoritar, 1)
     }
+}
