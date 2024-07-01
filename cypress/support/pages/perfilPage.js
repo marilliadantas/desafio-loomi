@@ -1,5 +1,5 @@
 let el = require('../elements/perfilElements').perfil
-const { click, get_text, set, clear, waitElement } = require('../actions');
+const { click, get_text, set, clear } = require('../actions');
 
 export default {
     clicarBtnEditarPerfil() {
