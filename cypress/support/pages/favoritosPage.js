@@ -1,5 +1,5 @@
 let el = require('../elements/favoritosElements').favoritos
-const { click, get_text, set, click_index } = require('../actions');
+const { click, get_text, set, click_indexForce } = require('../actions');
 
 export default {
     validaPaginaFavoritos() {
@@ -16,7 +16,7 @@ export default {
             if (nome) {
                 set(el.inputTimes, nome)
                 cy.wait(1000)
-                click_index(el.btnAddTimes, 3)
+                click_indexForce(el.btnAddTimes, 3)
                 click(el.btnConcluir)
                 break
             }
