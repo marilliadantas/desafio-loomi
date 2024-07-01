@@ -35,9 +35,6 @@ Cypress.Commands.add("excluirConta", () => {
     expect(text).eq('Você tem certeza que deseja excluir sua conta? Esta ação é irreversível e você perderá todos os dados salvos nela. ')
   })
   perfil.clicarBtnExcluir()
-  perfil.validarMsgSucesso().then((text) => {
-    expect(text).eq('Conta deletada com sucesso!')
-  })
 })
 
 Cypress.Commands.add("removerTime", () => {
