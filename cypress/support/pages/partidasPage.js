@@ -12,5 +12,9 @@ export default {
 
     clicarBtnAddCalendario() {
         click_index(el.btnFavoritar, 1)
+    },
+
+    validarPartidaCalendario() {
+        cy.get(el.partidaAdicionada).eq(1).should('be.visible')
     }
 }

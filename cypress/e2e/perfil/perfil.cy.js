@@ -15,7 +15,6 @@ describe("Validar perfil", () => {
       home.abrirModal()
       perfil.clicarBtnEditarPerfil()
       perfil.editarNome("Editando nome")
-      perfil.clicarBtnSalvar()
       perfil.validarMsgSucesso().then((mensagem) => {
         expect(mensagem).to.eq("Perfil atualizado com sucesso!")
       })

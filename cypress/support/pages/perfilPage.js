@@ -9,6 +9,7 @@ export default {
     editarNome(nome) {
         clear(el.inputNome)
         set(el.inputNome, nome)
+        click(el.btnSalvar)
     },
 
     clicarBtnSair() {

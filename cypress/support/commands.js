@@ -3,6 +3,7 @@ import modal from "../support/pages/modalPage";
 import login from "../support/pages/loginPage";
 import cadastro from "../support/pages/cadastroPage";
 import perfil from "../support/pages/perfilPage";
+import favoritos from "../support/pages/favoritosPage";
 
 Cypress.Commands.add("realizarLogin", () => {
   home.acessarPagina()
@@ -37,4 +38,10 @@ Cypress.Commands.add("excluirConta", () => {
   perfil.validarMsgSucesso().then((text) => {
     expect(text).eq('Conta deletada com sucesso!')
   })
+})
+
+Cypress.Commands.add("removerTime", () => {
+  favoritos.clicarEditar()
+  favoritos.clicarExcluirTime()
+  favoritos.clicarSalvar()
 })

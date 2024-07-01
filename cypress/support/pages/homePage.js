@@ -16,23 +16,18 @@ export default {
     switch(option){
         case 'Time':
             click(el.filtroTime)
-            if (nome !== null) {
+            if (nome) {
                 set(el.filtroTime, nome)
             }
             cy.wait(2000)
             return get_text_index(el.lista, 0)
         case 'Campeonato':
             click(el.filtroCampeonato)
-            if (nome !== null) {
+            if (nome) {
                 set(el.filtroCampeonato, nome)
             }
             cy.wait(2000)
             return get_text_index(el.lista, 0)
-        // case 'Streaming':
-        //     click(el.filtroStreaming)
-        //     set(el.filtroStreaming, 'Apple TV')
-        //     cy.wait(1000)
-        //     return get_text_index(el.lista, 0)
         default:
             'Favor informar uma opção válida'
         }
