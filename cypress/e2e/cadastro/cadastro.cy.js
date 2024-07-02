@@ -20,7 +20,7 @@ describe("Validar cadastro", () => {
       cy.logout()
     })
 
-    it("Cadastro com sucesso", () => {
+    it("CT01 - Cadastro com sucesso", () => {
       cadastro.preencherCadastro(nome, email, senha, senha)
       cadastro.clicarCriarConta()
       home.validarMsg().then((text) => {

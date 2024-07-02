@@ -1,14 +1,22 @@
 let el = require('../elements/partidasElements').partidas
-const { click_index, get_text_index } = require('../actions');
+const { click_index, listLength, getImg } = require('../actions');
 
 export default {
-    clicarBtnFavoritar() {
+    clicarFavoritar() {
         click_index(el.btnFavoritar, 0)
     },
 
-    validarPartida() {
-        return cy.get(el.partidaFavoritada).invoke('text')
+    validarPartida(qtd) {
+        return listLength(el.partidaFavorita, qtd)
     },
+
+    validarPartidaFavoritada() {
+        return getImg(el.partidaFavoritada)
+    },
+
+    validarPartidaDesfavoritada() {
+        return getImg(el.partidaDesfavoritada)
+    }
 
     // clicarBtnAddCalendario() {
     //     click_index(el.btnFavoritar, 1)

@@ -212,9 +212,13 @@ function listLength(el, qtd) {
     cy.log('Viewed the Element ' + el + ' with length ' + qtd)
 }
 
+function getImg(el) {
+    return cy.get(el).should('exist').and('be.visible').invoke('attr', 'src')
+}
+
 module.exports = {
     set, click, waitElement, waitElement_index, click_index, 
         clear, get_text, scrollTo, get_text_index, replaceIN, splitIn,
             click_text, loadPage, set_Index, clickForce, click_indexForce, clear_index,
-                get_texts, listLength
+                get_texts, listLength, getImg
 };

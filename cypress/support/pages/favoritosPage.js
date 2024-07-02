@@ -1,5 +1,5 @@
 let el = require('../elements/favoritosElements').favoritos
-const { click, get_text, set, click_indexForce, get_text_index, clickForce } = require('../actions');
+const { click, get_text, set, click_indexForce, get_text_index, clickForce, click_index } = require('../actions');
 
 export default {
     validarPagina() {
@@ -12,7 +12,7 @@ export default {
         click(el.btnFavoritar)
         if (nome) {
             set(el.inputTimes, nome)
-            cy.wait(1000)
+            cy.wait(2000)
             click_indexForce(el.btnAddTimes, index)
             click(el.btnConcluir)
             break
@@ -21,7 +21,7 @@ export default {
         click(el.btnCanais)
         if (nome) {
             set(el.inputCanais, nome)
-            cy.wait(1000)
+            cy.wait(2000)
             click_indexForce(el.btnAddCanais, index)
             click(el.btnConcluirCanais)
             break
@@ -31,7 +31,11 @@ export default {
          }
      },
 
-     clicarEditar() {
+    clicarFavoritar() {
+        click_index(el.btnFavoritar, 0)
+     }, 
+
+    clicarEditar() {
         click(el.btnEditar)
      },
 

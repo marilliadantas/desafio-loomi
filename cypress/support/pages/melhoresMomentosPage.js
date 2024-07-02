@@ -8,6 +8,7 @@ export default {
         click_index(el.btnMenu, 0)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
+          cy.wait(2500)
           click_indexForce(el.checkbox, 3)
           break
         }
@@ -15,13 +16,22 @@ export default {
         click_index(el.btnMenu, 1)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
+          cy.wait(2500)
           click_indexForce(el.checkbox, 0)
           break
         }
-      case "Inválido":
-        click_index(el.btnMenu, index)
+      case "TimeInvalido":
+        click_index(el.btnMenu, 0)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
+          cy.wait(2500)
+          break
+        }
+        case "CampeonatoInvalido":
+        click_index(el.btnMenu, 1)
+        if (nome) {
+          set_Index(el.inputPesquisar, nome, index)
+          cy.wait(2500)
           break
         }
       default:

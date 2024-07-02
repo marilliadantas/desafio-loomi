@@ -18,14 +18,14 @@ export default {
         if (nome) {
           set(el.filtroTime, nome)
         }
-        cy.wait(1000)
+        cy.wait(2500)
         return get_text_index(el.lista, 0)
       case "Campeonato":
         click(el.filtroCampeonato)
         if (nome) {
           set(el.filtroCampeonato, nome)
         }
-        cy.wait(1000)
+        cy.wait(2500)
         return get_text_index(el.lista, 0)
       default:
         "Favor informar uma opção válida"
@@ -50,5 +50,9 @@ export default {
 
   acessarMelhoresMomentos() {
     click(el.paginaMelhoresMomentos)
+  },
+
+  acessarPartidas() {
+    clickForce(el.paginaPartidas)
   },
 }

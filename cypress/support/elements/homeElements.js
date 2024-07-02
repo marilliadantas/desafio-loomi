@@ -11,5 +11,6 @@ export const home = {
     msgSemResultados: '.chakra-text.css-ks5w62',
     paginaFavoritos: '[data-cy="link/favoritos"]',
     paginaMelhoresMomentos: '[data-cy="link/melhores-momentos"]',
-    fecharAlerta: '.Toastify__close-button'
+    fecharAlerta: '.Toastify__close-button',
+    paginaPartidas: '[data-cy="link/"]'
 }

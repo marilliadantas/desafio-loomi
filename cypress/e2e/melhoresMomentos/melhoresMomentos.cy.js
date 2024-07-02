@@ -17,7 +17,7 @@ describe("Validar melhores momentos", () => {
   })
 
   it("CT38 - Filtrar por time inválido", () => {
-    melhoresMomentos.validarFiltroDeBusca("Inválido", "Teste", 0)
+    melhoresMomentos.validarFiltroDeBusca("TimeInvalido", "Teste", 0)
     melhoresMomentos.validarMsgSemResultados().then((mensagem) => {
       expect(mensagem).to.eq("Nenhum time foi encontrado")
     })
@@ -29,7 +29,7 @@ describe("Validar melhores momentos", () => {
   })
 
   it("CT40 - Filtrar por campeonato inválido", () => {
-    melhoresMomentos.validarFiltroDeBusca("Inválido", "Teste", 1)
+    melhoresMomentos.validarFiltroDeBusca("CampeonatoInvalido", "Teste", 1)
     melhoresMomentos.validarMsgSemResultados().then((mensagem) => {
       expect(mensagem).to.eq("Nenhum campeonato foi encontrado")
     })
