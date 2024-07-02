@@ -1,10 +1,11 @@
 let el = require("../elements/melhoresMomentosElements").melhoresMomentos
-const { get_text, click_index, set_Index, click_indexForce, listLength } = require("../actions")
+const { get_text, click_index, set_Index, click_indexForce, listLength, waitElement } = require("../actions")
 
 export default {
   validarFiltroDeBusca(option, nome, index) {
     switch (option) {
       case "Time":
+        waitElement(el.btnMenu)
         click_index(el.btnMenu, 0)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
