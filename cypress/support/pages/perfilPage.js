@@ -1,5 +1,5 @@
 let el = require("../elements/perfilElements").perfil
-const { click, get_text, set, clear } = require("../actions")
+const { click, get_text, set, clear, clickForce } = require("../actions")
 
 export default {
   clicarBtnEditarPerfil() {
@@ -21,11 +21,11 @@ export default {
   },
 
   clicarBtnExcluirConta() {
-    click(el.btnExcluir)
+    clickForce(el.btnExcluir)
   },
 
   clicarBtnExcluir() {
-    click(el.btnExcluirConta)
+    clickForce(el.btnExcluirConta)
   },
 
   validaMsgConfirmacao() {
