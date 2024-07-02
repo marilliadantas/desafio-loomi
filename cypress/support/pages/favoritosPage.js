@@ -1,5 +1,5 @@
 let el = require('../elements/favoritosElements').favoritos
-const { click, get_text, set, click_indexForce } = require('../actions');
+const { click, get_text, set, click_indexForce, get_text_index, waitElement, click_index, clickForce } = require('../actions');
 
 export default {
     validaPaginaFavoritos() {
@@ -8,26 +8,27 @@ export default {
        })
      },
      
-     validarFiltroDeBusca(option, nome) {
-     cy.wait(2000)
-     switch(option){
-         case 'Time':
-            click(el.btnFavoritar)
-            if (nome) {
-                set(el.inputTimes, nome)
-                cy.wait(1000)
-                click_indexForce(el.btnAddTimes, 3)
-                click(el.btnConcluir)
-                break
-            }
-        //  case 'Campeonato':
-        //      click_index(el.btnMenu, 1)
-        //      if (nome) {
-        //          set_Index(el.inputPesquisar, nome, 1)
-        //          cy.wait(1000)
-        //          click_indexForce(el.checkbox, 0)
-        //          break
-        //      }
+    validarFiltroDeBusca(option, nome) {
+    cy.wait(2000)
+    switch(option){
+    case 'Time':
+        click(el.btnFavoritar)
+        if (nome) {
+            set(el.inputTimes, nome)
+            cy.wait(1000)
+            click_indexForce(el.btnAddTimes, 3)
+            click(el.btnConcluir)
+            break
+        }
+    case 'Canal':
+        click(el.btnCanais)
+        if (nome) {
+            set(el.inputCanais, nome)
+            cy.wait(1000)
+            click_indexForce(el.btnAddCanais, 0)
+            click(el.btnConcluirCanais)
+            break
+        }
         //  case 'Inválido':
         //      click_index(el.btnMenu, index)
         //      if (nome) {
@@ -52,7 +53,33 @@ export default {
         click(el.btnSalvar)
     },
 
-     validarTimeAdicionado() {
+    clicarEditarCanal() {
+        click(el.btnEditarCanal)
+    },
+
+    clicarExcluirCanal() {
+        clickForce(el.btnExcluirCanal)
+    },
+
+    clicarConcluir() {
+        click(el.btnConcluirCanais)
+    },
+
+    validarTimeAdicionado() {
         return get_text(el.tituloTime)
-     }
+    },
+
+    validarTimeRemovido() {
+        cy.wait(3000)
+        return get_text_index(el.msg, 0)
+    },
+
+    validarCanalAdicionado() {
+        return get_text(el.nomeCanal)
+    },
+
+    validarCanalRemovido() {
+        cy.wait(3000)
+        return get_text_index(el.msg, 1)
+    },
 }

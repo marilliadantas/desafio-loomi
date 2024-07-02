@@ -11,5 +11,9 @@ export const favoritos = {
    tituloPagina: '.chakra-heading.css-1qj6dfn',
    btnEditar: '[data-cy="btn-edit-teams"]',
    btnExcluirTime: '.chakra-button.css-di3rc',
-   btnSalvar: '[data-cy="btn-save-teams"]'
+   btnSalvar: '[data-cy="btn-save-teams"]',
+   msg: '.chakra-text.css-q1nkkp',
+   btnConcluirCanais: '[data-cy="btn-submit-channels"]',
+   btnEditarCanal: '[data-cy="btn-edit-channels"]',
+   btnExcluirCanal: '.chakra-button.css-ju8hy0'
 }

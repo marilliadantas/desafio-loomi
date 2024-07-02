@@ -37,8 +37,22 @@ Cypress.Commands.add("excluirConta", () => {
   perfil.clicarBtnExcluir()
 })
 
+Cypress.Commands.add("favoritarTime", () => {
+  favoritos.validarFiltroDeBusca("Time", "Flamengo")
+})
+
+Cypress.Commands.add("favoritarCanal", () => {
+  favoritos.validarFiltroDeBusca("Canal", "Apple TV")
+})
+
 Cypress.Commands.add("removerTime", () => {
   favoritos.clicarEditar()
   favoritos.clicarExcluirTime()
   favoritos.clicarSalvar()
+})
+
+Cypress.Commands.add("removerCanal", () => {
+  favoritos.clicarEditarCanal()
+  favoritos.clicarExcluirCanal()
+  favoritos.clicarConcluir()
 })
