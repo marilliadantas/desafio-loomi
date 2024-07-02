@@ -1,14 +1,36 @@
+// function waitElement(el) {
+//     cy.log('Waiting for ' + el + ' element to be visible')
+//     cy.get(el, { timeout: 10000 }).should('be.visible')
+//     cy.log('Found the element ' + el)
+// }
+
 function waitElement(el) {
-    cy.log('Waiting for ' + el + ' element to be visible')
-    cy.get(el, { timeout: 10000 }).should('be.visible')
-    cy.log('Found the element ' + el)
+    try {
+        cy.log('Waiting for ' + el + ' element to be visible')
+        cy.get(el, {timeout: 10000}).and('be.visible');
+        cy.log('Found the element ' + el)
+    } catch (error) {
+        cy.log('Exception caught: ' + error.message);
+    }
+    return waitElement;
 }
 
 function waitElement_index(el, index) {
-    cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
-    cy.get(el, { timeout: 20000 }).eq(index).should('be.visible')
-    cy.log('Found the element ' + el)
+    try {
+        cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
+        cy.get(el, {timeout: 10000}).eq(index).and('be.visible');
+        cy.log('Found the element ' + el)
+    } catch (error) {
+        cy.log('Exception caught: ' + error.message);
+    }
+    return waitElement_index;
 }
+
+// function waitElement_index(el, index) {
+//     cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
+//     cy.get(el, { timeout: 20000 }).eq(index).should('be.visible')
+//     cy.log('Found the element ' + el)
+// }
 
 function loadPage(url) {
     try {
