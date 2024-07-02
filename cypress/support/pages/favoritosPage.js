@@ -64,7 +64,7 @@ export default {
     },
 
     validarTimeRemovido() {
-        cy.wait(2000)
+        cy.wait(2500)
         return get_text_index(el.msg, 0)
     },
 
@@ -73,7 +73,7 @@ export default {
     },
 
     validarCanalRemovido() {
-        cy.wait(2000)
+        cy.wait(2500)
         return get_text_index(el.msg, 1)
     },
 }
