@@ -1,20 +1,20 @@
-let el = require('../elements/modalElements').modal
-const { click, get_text } = require('../actions');
+let el = require("../elements/modalElements").modal
+const { click, get_text } = require("../actions")
 
 export default {
-    clicarBtnCriarConta() {
-        click(el.btnCriarConta)
-    },
+  clicarBtnCriarConta() {
+    click(el.btnCriarConta)
+  },
 
-    clicarBtnSair() {
-        click(el.btnSair)
-    },
+  clicarBtnSair() {
+    click(el.btnSair)
+  },
 
-    validarModal() {
-        return get_text(el.tituloModal)
-    },
+  validarModal() {
+    return get_text(el.tituloModal)
+  },
 
-    validarMsg() {
-        return get_text(el.msg)
-    }
+  validarMsg() {
+    return get_text(el.msg)
+  },
 }

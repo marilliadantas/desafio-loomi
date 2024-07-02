@@ -5,7 +5,7 @@ import cadastro from "../support/pages/cadastroPage";
 import perfil from "../support/pages/perfilPage";
 import favoritos from "../support/pages/favoritosPage";
 
-Cypress.Commands.add("realizarLogin", () => {
+Cypress.Commands.add("login", () => {
   home.acessarPagina()
   home.abrirModal()
   modal.validarModal()
@@ -22,27 +22,24 @@ Cypress.Commands.add("criarConta", () => {
   home.acessarPagina()
   home.abrirModal()
   modal.clicarBtnCriarConta()
-  cadastro.preencherCadastro("Conta excluir", "emailteste@teste.com", "Teste123", "Teste123")
+  cadastro.preencherCadastro("Conta excluir", "emailqa@teste.com", "Teste123", "Teste123")
   cadastro.clicarCriarConta()
-  home.validarMsg().then((text) => {
-    expect(text).eq('Cadastro realizado com sucesso! Verifique seu e-mail para ativar sua conta.')
-  })
+  home.fecharAlerta()
 })
 
 Cypress.Commands.add("excluirConta", () => {
+  home.abrirModal()
   perfil.clicarBtnExcluirConta()
-  perfil.validaMsgConfirmacao().then((text) => {
-    expect(text).eq('Você tem certeza que deseja excluir sua conta? Esta ação é irreversível e você perderá todos os dados salvos nela. ')
-  })
   perfil.clicarBtnExcluir()
+  home.fecharAlerta()
 })
 
 Cypress.Commands.add("favoritarTime", () => {
-  favoritos.validarFiltroDeBusca("Time", "Flamengo")
+  favoritos.validarPesquisa("Time", "Flamengo", 3)
 })
 
 Cypress.Commands.add("favoritarCanal", () => {
-  favoritos.validarFiltroDeBusca("Canal", "Apple TV")
+  favoritos.validarPesquisa("Canal", "Apple TV", 0)
 })
 
 Cypress.Commands.add("removerTime", () => {

@@ -1,12 +1,7 @@
 function waitElement(el) {
-    try {
-        cy.log('Waiting for ' + el + ' element to be visible')
-        cy.get(el).and('be.visible');
-        cy.log('Found the element ' + el)
-    } catch (error) {
-        cy.log('Exception caught: ' + error.message);
-    }
-    return waitElement;
+    cy.log('Waiting for ' + el + ' element to be visible')
+    cy.get(el, { timeout: 10000 }).should('be.visible')
+    cy.log('Found the element ' + el)
 }
 
 function waitElement_index(el, index) {
@@ -212,9 +207,14 @@ function splitIn(el, index) {
     return corretValue;
 }
 
+function listLength(el, qtd) {
+    cy.get(el, { timeout: 10000 }).should('exist').and('have.length', qtd)
+    cy.log('Viewed the Element ' + el + ' with length ' + qtd)
+}
+
 module.exports = {
     set, click, waitElement, waitElement_index, click_index, 
         clear, get_text, scrollTo, get_text_index, replaceIN, splitIn,
             click_text, loadPage, set_Index, clickForce, click_indexForce, clear_index,
-                get_texts
+                get_texts, listLength
 };

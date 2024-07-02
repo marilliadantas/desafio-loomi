@@ -2,21 +2,18 @@ let el = require('../elements/favoritosElements').favoritos
 const { click, get_text, set, click_indexForce, get_text_index, clickForce } = require('../actions');
 
 export default {
-    validaPaginaFavoritos() {
-        return get_text(el.tituloPagina).then((text) => {
-         expect(text).eq('Partidas favoritas')
-       })
-     },
+    validarPagina() {
+        return get_text(el.tituloPagina)
+    },
      
-    validarFiltroDeBusca(option, nome) {
-    cy.wait(2000)
+    validarPesquisa(option, nome, index) {
     switch(option){
     case 'Time':
         click(el.btnFavoritar)
         if (nome) {
             set(el.inputTimes, nome)
             cy.wait(1000)
-            click_indexForce(el.btnAddTimes, 3)
+            click_indexForce(el.btnAddTimes, index)
             click(el.btnConcluir)
             break
         }
@@ -25,12 +22,12 @@ export default {
         if (nome) {
             set(el.inputCanais, nome)
             cy.wait(1000)
-            click_indexForce(el.btnAddCanais, 0)
+            click_indexForce(el.btnAddCanais, index)
             click(el.btnConcluirCanais)
             break
         }
-         default:
-             'Favor informar uma opção válida'
+        default:
+            'Favor informar uma opção válida'
          }
      },
 
@@ -63,7 +60,7 @@ export default {
     },
 
     validarTimeRemovido() {
-        cy.wait(3000)
+        cy.wait(2000)
         return get_text_index(el.msg, 0)
     },
 
@@ -72,7 +69,7 @@ export default {
     },
 
     validarCanalRemovido() {
-        cy.wait(3000)
+        cy.wait(2000)
         return get_text_index(el.msg, 1)
     },
 }

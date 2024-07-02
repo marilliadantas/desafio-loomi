@@ -1,39 +1,38 @@
-let el = require('../elements/perfilElements').perfil
-const { click, get_text, set, clear } = require('../actions');
+let el = require("../elements/perfilElements").perfil
+const { click, get_text, set, clear } = require("../actions")
 
 export default {
-    clicarBtnEditarPerfil() {
-        click(el.btnEditar)
-    },
+  clicarBtnEditarPerfil() {
+    click(el.btnEditar)
+  },
 
-    editarNome(nome) {
-        clear(el.inputNome)
-        set(el.inputNome, nome)
-        click(el.btnSalvar)
-    },
+  editarNome(nome) {
+    clear(el.inputNome)
+    set(el.inputNome, nome)
+    click(el.btnSalvar)
+  },
 
-    clicarBtnSair() {
-        click(el.btnSair)
-    },
+  clicarBtnSair() {
+    click(el.btnSair)
+  },
 
-    clicarBtnSalvar() {
-        click(el.btnSalvar)
-    },
+  clicarBtnSalvar() {
+    click(el.btnSalvar)
+  },
 
-    clicarBtnExcluirConta() {
-        click(el.btnExcluir)
-    },
+  clicarBtnExcluirConta() {
+    click(el.btnExcluir)
+  },
 
-    clicarBtnExcluir() {
-        cy.wait(4000)
-        click(el.btnExcluirConta)
-    },
+  clicarBtnExcluir() {
+    click(el.btnExcluirConta)
+  },
 
-    validaMsgConfirmacao() {
-        return get_text(el.msgConfirmacao)
-    },
+  validaMsgConfirmacao() {
+    return get_text(el.msgConfirmacao)
+  },
 
-    validarMsgSucesso() {
-        return get_text(el.msgSucesso)
-    }
+  validarMsgSucesso() {
+    return get_text(el.msgSucesso)
+  },
 }

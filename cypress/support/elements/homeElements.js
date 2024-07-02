@@ -10,5 +10,6 @@ export const home = {
     cardsJogos: '.css-5prxxc',
     msgSemResultados: '.chakra-text.css-ks5w62',
     paginaFavoritos: '[data-cy="link/favoritos"]',
-    paginaMelhoresMomentos: '[data-cy="link/melhores-momentos"]'
+    paginaMelhoresMomentos: '[data-cy="link/melhores-momentos"]',
+    fecharAlerta: '.Toastify__close-button'
 }
