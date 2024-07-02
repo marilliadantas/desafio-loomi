@@ -16,13 +16,17 @@ export default {
 
     validarPartidaDesfavoritada() {
         return getImg(el.partidaDesfavoritada)
-    }
+    },
 
-    // clicarBtnAddCalendario() {
-    //     click_index(el.btnFavoritar, 1)
-    // },
+    clicarAdicionarCalendario() {
+        click_index(el.btnAddCalendario, 1)
+    },
 
-    // validarPartidaCalendario() {
-    //     cy.get(el.partidaAdicionada).eq(1).should('be.visible')
-    // }
+    validarPartidaAdicionada() {
+        return getImg(el.adicionadaCalendario)
+    },
+
+    validarPartidaRemovida() {
+        return getImg(el.removidaCalendario)
+    },
 }

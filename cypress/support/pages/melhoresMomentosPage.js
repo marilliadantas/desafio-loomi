@@ -1,5 +1,5 @@
 let el = require("../elements/melhoresMomentosElements").melhoresMomentos
-const { get_text, click_index, set_Index, click_indexForce, listLength, waitElement } = require("../actions")
+const { get_text, click_index, set_Index, click_indexForce, listLength, waitElement, waitElement_index } = require("../actions")
 
 export default {
   validarFiltroDeBusca(option, nome, index) {
@@ -9,7 +9,7 @@ export default {
         click_index(el.btnMenu, 0)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
-          cy.wait(2500)
+          waitElement_index(el.checkbox, 3)
           click_indexForce(el.checkbox, 3)
           break
         }
@@ -17,7 +17,7 @@ export default {
         click_index(el.btnMenu, 1)
         if (nome) {
           set_Index(el.inputPesquisar, nome, index)
-          cy.wait(2500)
+          waitElement_index(el.checkbox, 0)
           click_indexForce(el.checkbox, 0)
           break
         }

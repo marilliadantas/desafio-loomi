@@ -24,8 +24,7 @@ describe("Validar cadastro", () => {
       cadastro.preencherCadastro(nome, email, senha, senha)
       cadastro.clicarCriarConta()
       home.validarMsg().then((text) => {
-        expect(text).eq(
-          "Cadastro realizado com sucesso! Verifique seu e-mail para ativar sua conta."
+        expect(text).eq("Cadastro realizado com sucesso! Verifique seu e-mail para ativar sua conta."
         )
       })
       home.fecharAlerta()
@@ -37,8 +36,7 @@ describe("Validar cadastro", () => {
       cadastro.preencherCadastro(nome, Cypress.env("email"), senha, senha)
       cadastro.clicarCriarConta()
       home.validarMsg().then((text) => {
-        expect(text).eq(
-          "Este endereço de email ja esta sendo utilizado, tente outro."
+        expect(text).eq("Este endereço de email ja esta sendo utilizado, tente outro."
         )
       })
       home.fecharAlerta()

@@ -1,5 +1,5 @@
 let el = require("../elements/loginElements").login
-const { click, set, get_text } = require("../actions")
+const { click, set, get_text, clickForce } = require("../actions")
 
 export default {
   preencherLogin(email, senha) {
@@ -12,7 +12,7 @@ export default {
   },
 
   clicarLogin() {
-    click(el.btnEntrar)
+    clickForce(el.btnEntrar)
   },
 
   validarAlertaEmail() {

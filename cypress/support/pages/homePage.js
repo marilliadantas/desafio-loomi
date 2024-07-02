@@ -14,6 +14,7 @@ export default {
   ValidarPesquisa(option, nome) {
     switch (option) {
       case "Time":
+        waitElement(el.filtroTime)
         click(el.filtroTime)
         if (nome) {
           set(el.filtroTime, nome)
@@ -21,6 +22,7 @@ export default {
         cy.wait(2500)
         return get_text_index(el.lista, 0)
       case "Campeonato":
+        waitElement(el.filtroCampeonato)
         click(el.filtroCampeonato)
         if (nome) {
           set(el.filtroCampeonato, nome)
@@ -55,4 +57,9 @@ export default {
   acessarPartidas() {
     clickForce(el.paginaPartidas)
   },
+
+  acessarCalendario() {
+    waitElement(el.paginaCalendario)
+    clickForce(el.paginaCalendario)
+  }
 }

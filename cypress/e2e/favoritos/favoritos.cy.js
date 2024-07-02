@@ -49,12 +49,4 @@ describe("Validar favoritos", () => {
       expect(mensagem).to.eq("Atualmente você não favoritou canais")
     })
   })
-
-  // it('CT34 - Habilitar partidas favoritas', () => {
-
-  // })
-
-  // it('CT35 - Desabilitar partidas favoritas', () => {
-
-  // })
 })

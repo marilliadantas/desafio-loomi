@@ -15,8 +15,6 @@ import home from "../../support/pages/homePage";
       partidas.validarPartidaFavoritada().then((src) => {
         expect(src).to.eq("/_next/static/media/star-filled.700fc2a2.svg");
       })
-      home.acessarFavoritos()
-      partidas.validarPartida(1)
       cy.desfavoritarPartida()
     })
     
@@ -29,12 +27,20 @@ import home from "../../support/pages/homePage";
       })
     })
 
-    // it('CT25 - Adicionar partida ao calendário', () => {
-    //   partidas.clicarBtnAddCalendario()
-    //   partidas.validarPartidaCalendario()
-    // })
+    it('CT25 - Adicionar partida ao calendário', () => {
+      partidas.clicarAdicionarCalendario()
+      partidas.validarPartidaAdicionada().then((src) => {
+        expect(src).to.eq("/_next/static/media/add-calendar-filled.cfbaa349.svg");
+      })
+      cy.removerPartidaCalendario()
+    })
 
-    // it('CT26 - Remover partida do calendário', () => {
-      
-    // })
+    it('CT26 - Remover partida do calendário', () => {
+      cy.adicionarPartidaCalendario()
+      home.acessarPartidas()
+      partidas.clicarAdicionarCalendario()
+      partidas.validarPartidaRemovida().then((src) => {
+        expect(src).to.eq("/_next/static/media/add-calendar.b040970f.svg");
+      })
+    })
 })

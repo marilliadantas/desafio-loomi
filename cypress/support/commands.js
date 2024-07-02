@@ -67,3 +67,13 @@ Cypress.Commands.add("desfavoritarPartida", () => {
   home.acessarFavoritos()
   favoritos.clicarFavoritar()
 })
+
+Cypress.Commands.add("adicionarPartidaCalendario", () => {
+  partidas.clicarAdicionarCalendario()
+  home.acessarCalendario()
+})
+
+Cypress.Commands.add("removerPartidaCalendario", () => {
+  home.acessarPartidas()
+  partidas.clicarAdicionarCalendario()
+})

@@ -5,14 +5,9 @@ function waitElement(el) {
 }
 
 function waitElement_index(el, index) {
-    try {
-        cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
-        cy.get(el).eq(index, {timeout: 10000} )
-        cy.log('Found the element ' + el)
-    } catch (error) {
-        cy.log('Exception caught: ' + error.message);
-    }
-    return waitElement_index;
+    cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
+    cy.get(el, { timeout: 20000 }).eq(index).should('be.visible')
+    cy.log('Found the element ' + el)
 }
 
 function loadPage(url) {
@@ -217,8 +212,6 @@ function getImg(el) {
 }
 
 module.exports = {
-    set, click, waitElement, waitElement_index, click_index, 
-        clear, get_text, scrollTo, get_text_index, replaceIN, splitIn,
-            click_text, loadPage, set_Index, clickForce, click_indexForce, clear_index,
-                get_texts, listLength, getImg
+    set, click, waitElement, waitElement_index, click_index, clear, get_text, scrollTo, get_text_index, replaceIN, splitIn,
+    click_text, loadPage, set_Index, clickForce, click_indexForce, clear_index, get_texts, listLength, getImg
 };

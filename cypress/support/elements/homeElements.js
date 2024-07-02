@@ -12,5 +12,6 @@ export const home = {
     paginaFavoritos: '[data-cy="link/favoritos"]',
     paginaMelhoresMomentos: '[data-cy="link/melhores-momentos"]',
     fecharAlerta: '.Toastify__close-button',
-    paginaPartidas: '[data-cy="link/"]'
+    paginaPartidas: '[data-cy="link/"]',
+    paginaCalendario: '[data-cy="link/calendario"]'
 }
