@@ -1,5 +1,5 @@
 let el = require('../elements/favoritosElements').favoritos
-const { click, get_text, set, click_indexForce, get_text_index, waitElement, click_index, clickForce } = require('../actions');
+const { click, get_text, set, click_indexForce, get_text_index, clickForce } = require('../actions');
 
 export default {
     validaPaginaFavoritos() {
@@ -29,13 +29,6 @@ export default {
             click(el.btnConcluirCanais)
             break
         }
-        //  case 'Inválido':
-        //      click_index(el.btnMenu, index)
-        //      if (nome) {
-        //          set_Index(el.inputPesquisar, nome, index)
-        //          cy.wait(1000)
-        //          break
-        //      }
          default:
              'Favor informar uma opção válida'
          }

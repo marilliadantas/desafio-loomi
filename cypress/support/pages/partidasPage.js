@@ -10,11 +10,11 @@ export default {
         return cy.get(el.partidaFavoritada).invoke('text')
     },
 
-    clicarBtnAddCalendario() {
-        click_index(el.btnFavoritar, 1)
-    },
+    // clicarBtnAddCalendario() {
+    //     click_index(el.btnFavoritar, 1)
+    // },
 
-    validarPartidaCalendario() {
-        cy.get(el.partidaAdicionada).eq(1).should('be.visible')
-    }
+    // validarPartidaCalendario() {
+    //     cy.get(el.partidaAdicionada).eq(1).should('be.visible')
+    // }
 }

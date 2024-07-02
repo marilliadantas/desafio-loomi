@@ -25,7 +25,7 @@ export default {
     },
 
     clicarBtnExcluir() {
-        cy.wait(5000)
+        cy.wait(4000)
         click(el.btnExcluirConta)
     },
 
