@@ -1,9 +1,3 @@
-// function waitElement(el) {
-//     cy.log('Waiting for ' + el + ' element to be visible')
-//     cy.get(el, { timeout: 10000 }).should('be.visible')
-//     cy.log('Found the element ' + el)
-// }
-
 function waitElement(el) {
     try {
         cy.log('Waiting for ' + el + ' element to be visible')
@@ -25,12 +19,6 @@ function waitElement_index(el, index) {
     }
     return waitElement_index;
 }
-
-// function waitElement_index(el, index) {
-//     cy.log('Waiting for ' + el + ' Index ' + index + ' to be visible')
-//     cy.get(el, { timeout: 20000 }).eq(index).should('be.visible')
-//     cy.log('Found the element ' + el)
-// }
 
 function loadPage(url) {
     try {
