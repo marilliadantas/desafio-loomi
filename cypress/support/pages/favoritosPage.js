@@ -1,5 +1,5 @@
 let el = require('../elements/favoritosElements').favoritos
-const { click, get_text, set, click_indexForce, get_text_index, clickForce, click_index } = require('../actions');
+const { click, get_text, set, click_indexForce, get_text_index, clickForce, click_index, waitElement_index } = require('../actions');
 
 export default {
     validarPagina() {
@@ -64,7 +64,7 @@ export default {
     },
 
     validarTimeRemovido() {
-        cy.wait(2500)
+        waitElement_index(el.msg, 0)
         return get_text_index(el.msg, 0)
     },
 
