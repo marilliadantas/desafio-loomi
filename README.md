@@ -49,62 +49,62 @@ Para visualizar o relatório, abra a pasta "Allure report" e abra o arquivo inde
 
 Este projeto utiliza uma estrutura organizada por funcionalidade para gerenciar os testes e comandos relacionados. Abaixo está a organização geral do projeto:
 
-    desafio-loomi
-├── .github
-│   └── workflows
-│       └── ci.yml
-├── cypress
-│   ├── e2e
-│   │   ├── cadastro
-│   │   │   └── cadastro.cy.js
-│   │   ├── calendario
-│   │   │   └── calendario.cy.js
-│   │   ├── favoritos
-│   │   │   └── favoritos.cy.js
-│   │   ├── home
-│   │   │   └── home.cy.js
-│   │   ├── login
-│   │   │   └── login.cy.js
-│   │   ├── melhoresMomentos
-│   │   │   └── melhoresMomentos.cy.js
-│   │   ├── partidas
-│   │   │   └── partidas.cy.js
-│   │   ├── perfil
-│   │   │   └── perfil.cy.js
-│   ├── fixtures
-│   │   └── login_data.json
-│   ├── support
-│   │   ├── elements
-│   │   │   ├── cadastroElements.js
-│   │   │   ├── calendarioElements.js
-│   │   │   ├── favoritosElements.js
-│   │   │   ├── homeElements.js
-│   │   │   ├── loginElements.js
-│   │   │   ├── melhoresMomentosElements.js
-│   │   │   ├── modalElements.js
-│   │   │   ├── partidasElements.js
-│   │   │   └── perfilElements.js
-│   │   ├── pages
-│   │   │   ├── cadastroPage.js
-│   │   │   ├── calendarioPage.js
-│   │   │   ├── favoritosPage.js
-│   │   │   ├── homePage.js
-│   │   │   ├── loginPage.js
-│   │   │   ├── melhoresMomentosPage.js
-│   │   │   ├── modalPage.js
-│   │   │   ├── partidasPage.js
-│   │   │   └── perfilPage.js
-│   │   ├── actions.js
-│   │   ├── commands.js
-│   │   └── e2e.js
-├── node_modules
-├── .gitignore
-├── cypress.config.js
-├── cypress.env.json
-├── jsconfig.json
-├── package.json
-├── package-lock.json
-└── readme.md
+      desafio-loomi
+    ├── .github
+    │   └── workflows
+    │       └── ci.yml
+    ├── cypress
+    │   ├── e2e
+    │   │   ├── cadastro
+    │   │   │   └── cadastro.cy.js
+    │   │   ├── calendario
+    │   │   │   └── calendario.cy.js
+    │   │   ├── favoritos
+    │   │   │   └── favoritos.cy.js
+    │   │   ├── home
+    │   │   │   └── home.cy.js
+    │   │   ├── login
+    │   │   │   └── login.cy.js
+    │   │   ├── melhoresMomentos
+    │   │   │   └── melhoresMomentos.cy.js
+    │   │   ├── partidas
+    │   │   │   └── partidas.cy.js
+    │   │   ├── perfil
+    │   │   │   └── perfil.cy.js
+    │   ├── fixtures
+    │   │   └── login_data.json
+    │   ├── support
+    │   │   ├── elements
+    │   │   │   ├── cadastroElements.js
+    │   │   │   ├── calendarioElements.js
+    │   │   │   ├── favoritosElements.js
+    │   │   │   ├── homeElements.js
+    │   │   │   ├── loginElements.js
+    │   │   │   ├── melhoresMomentosElements.js
+    │   │   │   ├── modalElements.js
+    │   │   │   ├── partidasElements.js
+    │   │   │   └── perfilElements.js
+    │   │   ├── pages
+    │   │   │   ├── cadastroPage.js
+    │   │   │   ├── calendarioPage.js
+    │   │   │   ├── favoritosPage.js
+    │   │   │   ├── homePage.js
+    │   │   │   ├── loginPage.js
+    │   │   │   ├── melhoresMomentosPage.js
+    │   │   │   ├── modalPage.js
+    │   │   │   ├── partidasPage.js
+    │   │   │   └── perfilPage.js
+    │   │   ├── actions.js
+    │   │   ├── commands.js
+    │   │   └── e2e.js
+    ├── node_modules
+    ├── .gitignore
+    ├── cypress.config.js
+    ├── cypress.env.json
+    ├── jsconfig.json
+    ├── package.json
+    ├── package-lock.json
+    └── readme.md
 
 ## Recursos
 - [Documentação Cypress](https://docs.cypress.io/guides/overview/why-cypress)
